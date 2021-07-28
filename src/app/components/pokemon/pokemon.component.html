@@ -1,0 +1,22 @@
+<hr>
+
+<h2>Pokemon Component</h2>
+
+<p>Will generate a random Pokemon and display its Name and Sprite.</p>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Sprite</th>
+    </tr>
+    <tr *ngIf="randPokemon != undefined && pokemonSpriteURL != undefined">
+        <td>{{randPokemon.name}}</td>
+        <td><img src={{pokemonSpriteURL}}></td>
+    </tr>
+</table>
+
+<br>
+
+<button (click)="displayPokemon()" class="btn btn-primary">Get Random Pokemon</button>
+
+<hr>

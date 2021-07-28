@@ -1,0 +1,22 @@
+<hr>
+
+<h2>Item Component</h2>
+
+<p>Will generate a random Item and display its Name and Sprite.</p>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Sprite</th>
+    </tr>
+    <tr *ngIf="randItem != undefined && itemSpriteURL != undefined">
+        <td>{{randItem.name}}</td>
+        <td><img src={{itemSpriteURL}}></td>
+    </tr>
+</table>
+
+<br>
+
+<button (click)="displayItem()" class="btn btn-primary">Get Random Item</button>
+
+<hr>
